@@ -22,12 +22,12 @@ class EditProfileViewController: UIViewController {
         aboutMeTextView.text = user?.aboutMe
     }
     
-    @IBAction func cancel(_ sender: AnyObject) {
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func save(_ sender: AnyObject) {
-        if let stateController = stateController, let name = nameTextField.text, let aboutMe = aboutMeTextView.text, !name.isEmpty && !aboutMe.isEmpty {
+   
+    @IBAction func save(_ sender: UIBarButtonItem) {
+    if let stateController = stateController, let name = nameTextField.text, let aboutMe = aboutMeTextView.text, !name.isEmpty && !aboutMe.isEmpty {
             let oldUser = stateController.user
             stateController.user = User(name: name, aboutMe: aboutMe, profileImage: oldUser.profileImage, reputation: oldUser.reputation)
          dismiss(animated: true, completion: nil)
