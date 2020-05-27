@@ -62,7 +62,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krd-v5-pPV">
                                 <rect key="frame" x="261" y="524" width="123" height="52"/>
                                 <connections>
-                                    <segue destination="uYr-Xm-fP7" kind="show" id="cyS-N3-DDh"/>
+                                    <segue destination="41D-ZK-ZdQ" kind="show" id="Zfr-En-Etm"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="LVK-9u-m87" userLabel="Top Stack View">
@@ -179,13 +179,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTH-2H-Wjk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTH-2H-Wjk">
                                 <rect key="frame" x="126" y="420" width="163" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 reputation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-hA-mDb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 reputation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-hA-mDb">
                                 <rect key="frame" x="145" y="481" width="127" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" name="Gray Chateau"/>
@@ -294,14 +294,14 @@
                         <viewLayoutGuide key="safeArea" id="HtM-RN-py8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="q27-Bt-rFU">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" style="done" id="feh-C6-nUF">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="feh-C6-nUF">
                             <connections>
-                                <action selector="cancel:" destination="2Mm-g5-AMo" id="zsr-wZ-eGA"/>
+                                <action selector="cancel:" destination="2Mm-g5-AMo" id="QPb-O0-l3g"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="etJ-hH-5t7">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="etJ-hH-5t7">
                             <connections>
-                                <action selector="save:" destination="2Mm-g5-AMo" id="hxV-ax-sWP"/>
+                                <action selector="save:" destination="2Mm-g5-AMo" id="ibJ-6J-Q4f"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -315,10 +315,10 @@
             </objects>
             <point key="canvasLocation" x="4613.04347826087" y="813.61607142857144"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="kjY-ij-cO6">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ULh-Sk-ese" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ULh-Sk-ese" customClass="MainTabBarController" customModule="Lifehacks" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rzi-Qy-SI6">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -382,6 +382,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oEz-M9-00d" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5Hq-rz-8C5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0WE-HE-nfe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -397,7 +398,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cyS-N3-DDh"/>
+        <segue reference="Zfr-En-Etm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Arrow down" width="24" height="24"/>

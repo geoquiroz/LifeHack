@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453CDFEC246DE5E500794A3C /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CDFEB246DE5E500794A3C /* Stateful.swift */; };
+		453CDFEE247DAA3D00794A3C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CDFED247DAA3D00794A3C /* MainTabBarController.swift */; };
 		453CE61D2447B74B00BF86D6 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CE61C2447B74B00BF86D6 /* RoundImageView.swift */; };
 		457FB3DE244E9949003CC71B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FB3DD244E9949003CC71B /* ProfileViewController.swift */; };
 		457FB3E82458BAC0003CC71B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FB3E72458BAC0003CC71B /* EditProfileViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		453CDFEB246DE5E500794A3C /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
+		453CDFED247DAA3D00794A3C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		453CE61C2447B74B00BF86D6 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		457FB3DD244E9949003CC71B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		457FB3E72458BAC0003CC71B /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				457FB3DD244E9949003CC71B /* ProfileViewController.swift */,
 				4590D506242FEFC9001C1B55 /* QuestionViewController.swift */,
 				453CE61C2447B74B00BF86D6 /* RoundImageView.swift */,
+				453CDFEB246DE5E500794A3C /* Stateful.swift */,
+				453CDFED247DAA3D00794A3C /* MainTabBarController.swift */,
 			);
 			path = Lifehacks;
 			sourceTree = "<group>";
@@ -155,8 +161,10 @@
 			files = (
 				457FB3E82458BAC0003CC71B /* EditProfileViewController.swift in Sources */,
 				4590D507242FEFC9001C1B55 /* QuestionViewController.swift in Sources */,
+				453CDFEE247DAA3D00794A3C /* MainTabBarController.swift in Sources */,
 				4590D503242FEFC9001C1B55 /* AppDelegate.swift in Sources */,
 				4590D505242FEFC9001C1B55 /* SceneDelegate.swift in Sources */,
+				453CDFEC246DE5E500794A3C /* Stateful.swift in Sources */,
 				4590D517242FF221001C1B55 /* Model.swift in Sources */,
 				457FB3DE244E9949003CC71B /* ProfileViewController.swift in Sources */,
 				4590D51924329962001C1B55 /* StateController.swift in Sources */,
