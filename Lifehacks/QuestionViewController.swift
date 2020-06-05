@@ -13,10 +13,7 @@ class QuestionViewController: UIViewController, Stateful {
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var ownerImageView: UIImageView!
-    
     @IBOutlet weak var ownerNameLabel: UILabel!
-    
-  
     
     var stateController: StateController?
     
@@ -28,7 +25,6 @@ class QuestionViewController: UIViewController, Stateful {
     titleLabel.text = question.title
     bodyLabel.text = question.body
     updateScore(for: question)
-    scoreLabel.text = "\(question.score)"
     let owner = question.owner
     ownerImageView.image = UIImage(named: owner.profileImage)
     ownerNameLabel.text = owner.name
@@ -41,8 +37,6 @@ class QuestionViewController: UIViewController, Stateful {
             profileViewController.user = stateController?.question.owner
         }
     }
-    
-    
     
       @IBAction func voteUp(_ sender: Any) {
           stateController?.question.voteUp()

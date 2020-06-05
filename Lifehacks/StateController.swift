@@ -9,7 +9,6 @@
 import Foundation
 
 class StateController {
-    
     var user = User(name: "John Doe", aboutMe: "I am the user of this app", profileImage: "Avatar", reputation: 100)
     
     var question = Question(title: "How to find a hole in a bicycle tire tube quickly",

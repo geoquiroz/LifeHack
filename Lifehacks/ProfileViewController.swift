@@ -6,7 +6,6 @@
 //  Copyright © 2020 Geovanny quiroz. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController, Stateful {
@@ -31,10 +30,16 @@ class ProfileViewController: UIViewController, Stateful {
     }
     
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let navigationController = segue.destination as? UINavigationController,
-                let destination = navigationController.viewControllers.first as? Stateful {
-                passState(to: destination)
-            }
+        guard let navigationController = segue.destination as? UINavigationController else {
+            return
+        }
+        let destination = navigationController.viewControllers.first
+        if let destination = destination as? Stateful {
+            passState(to: destination)
+        }
+        if let destination = destination as? EditProfileViewController {
+            destination.delegate = self
+         }
         }
     
     private func set(_ user: User){
@@ -45,3 +50,13 @@ class ProfileViewController: UIViewController, Stateful {
     }
     
 }
+
+extension ProfileViewController: EditProfileViewControllerDelegate {
+    func editProfileViewControllerDidEditProfileInfo(_ viewController: EditProfileViewController) {
+        nameLabel.textColor = UIColor.orange
+        reputationLabel.textColor = UIColor.orange
+        aboutMeLabel.textColor = UIColor.orange
+    }
+}
+
+

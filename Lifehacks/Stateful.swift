@@ -6,8 +6,6 @@
 //  Copyright © 2020 Geovanny quiroz. All rights reserved.
 //
 
-import Foundation
-
 protocol Stateful: class {
     var stateController: StateController? { get set }
 }

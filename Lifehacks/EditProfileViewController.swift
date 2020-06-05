@@ -6,14 +6,18 @@
 //  Copyright © 2020 Geovanny quiroz. All rights reserved.
 //
 
-import Foundation
 import UIKit
+
+protocol EditProfileViewControllerDelegate: class {
+    func editProfileViewControllerDidEditProfileInfo(_ viewController: EditProfileViewController)
+}
 
 class EditProfileViewController: UIViewController, Stateful {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var aboutMeTextView: UITextView!
     
     var stateController: StateController?
+    weak var delegate: EditProfileViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,32 +26,30 @@ class EditProfileViewController: UIViewController, Stateful {
         aboutMeTextView.text = user?.aboutMe
     }
     
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
+    @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     
-    
-    @IBAction func save(_ sender: UIBarButtonItem) {
-        if let stateController = stateController, let name = nameTextField.text, let aboutMe = aboutMeTextView.text, !name.isEmpty && !aboutMe.isEmpty {
-                let oldUser = stateController.user
-                stateController.user = User(name: name, aboutMe: aboutMe, profileImage: oldUser.profileImage, reputation: oldUser.reputation)
-             dismiss(animated: true, completion: nil)
-        }
-            else {
-                let title = "Missing name or about me"
-                let message = "Both name and about me need to be present to be able to save your editing"
-                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(cancelAction)
-                present(alertController, animated: true, completion: nil)
+    @IBAction func save(_ sender: Any) {
+    if let stateController = stateController, let name = nameTextField.text, let aboutMe = aboutMeTextView.text, !name.isEmpty && !aboutMe.isEmpty {
+                  let oldUser = stateController.user
+                        stateController.user = User(name: name, aboutMe: aboutMe, profileImage: oldUser.profileImage, reputation: oldUser.reputation)
+                 delegate?.editProfileViewControllerDidEditProfileInfo(self)
+                     dismiss(animated: true, completion: nil)
+                }
+                    else {
+                        let title = "Missing name or about me"
+                        let message = "Both name and about me need to be present to be able to save your editing"
+                        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                        let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alertController.addAction(cancelAction)
+                        present(alertController, animated: true, completion: nil)
+                    }
+                
             }
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let profileViewController = segue.destination as? ProfileViewController {
-            passState(to: profileViewController)
-        }
-    }
+            
+            
 }
+        
+    

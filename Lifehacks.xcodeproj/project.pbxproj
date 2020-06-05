@@ -9,28 +9,28 @@
 /* Begin PBXBuildFile section */
 		453CDFEC246DE5E500794A3C /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CDFEB246DE5E500794A3C /* Stateful.swift */; };
 		453CDFEE247DAA3D00794A3C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CDFED247DAA3D00794A3C /* MainTabBarController.swift */; };
-		453CE61D2447B74B00BF86D6 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CE61C2447B74B00BF86D6 /* RoundImageView.swift */; };
+		453CE61D2447B74B00BF86D6 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CE61C2447B74B00BF86D6 /* Views.swift */; };
 		457FB3DE244E9949003CC71B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FB3DD244E9949003CC71B /* ProfileViewController.swift */; };
 		457FB3E82458BAC0003CC71B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FB3E72458BAC0003CC71B /* EditProfileViewController.swift */; };
 		4590D503242FEFC9001C1B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590D502242FEFC9001C1B55 /* AppDelegate.swift */; };
-		4590D505242FEFC9001C1B55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590D504242FEFC9001C1B55 /* SceneDelegate.swift */; };
 		4590D507242FEFC9001C1B55 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590D506242FEFC9001C1B55 /* QuestionViewController.swift */; };
 		4590D50A242FEFC9001C1B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4590D508242FEFC9001C1B55 /* Main.storyboard */; };
 		4590D50C242FEFD0001C1B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4590D50B242FEFD0001C1B55 /* Assets.xcassets */; };
 		4590D50F242FEFD0001C1B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4590D50D242FEFD0001C1B55 /* LaunchScreen.storyboard */; };
 		4590D517242FF221001C1B55 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590D516242FF221001C1B55 /* Model.swift */; };
 		4590D51924329962001C1B55 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590D51824329962001C1B55 /* StateController.swift */; };
+		45D812302488355A005BD81D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8122F2488355A005BD81D /* UIColor.swift */; };
+		45D81232248835DC005BD81D /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D81231248835DC005BD81D /* UINavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		453CDFEB246DE5E500794A3C /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 		453CDFED247DAA3D00794A3C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		453CE61C2447B74B00BF86D6 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		453CE61C2447B74B00BF86D6 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		457FB3DD244E9949003CC71B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		457FB3E72458BAC0003CC71B /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		4590D4FF242FEFC9001C1B55 /* Lifehacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lifehacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4590D502242FEFC9001C1B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4590D504242FEFC9001C1B55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4590D506242FEFC9001C1B55 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		4590D509242FEFC9001C1B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4590D50B242FEFD0001C1B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		4590D510242FEFD0001C1B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4590D516242FF221001C1B55 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4590D51824329962001C1B55 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		45D8122F2488355A005BD81D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		45D81231248835DC005BD81D /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,20 +72,21 @@
 		4590D501242FEFC9001C1B55 /* Lifehacks */ = {
 			isa = PBXGroup;
 			children = (
-				4590D502242FEFC9001C1B55 /* AppDelegate.swift */,
-				4590D50B242FEFD0001C1B55 /* Assets.xcassets */,
-				4590D510242FEFD0001C1B55 /* Info.plist */,
-				4590D50D242FEFD0001C1B55 /* LaunchScreen.storyboard */,
 				4590D508242FEFC9001C1B55 /* Main.storyboard */,
-				457FB3E72458BAC0003CC71B /* EditProfileViewController.swift */,
-				4590D516242FF221001C1B55 /* Model.swift */,
-				4590D504242FEFC9001C1B55 /* SceneDelegate.swift */,
+				4590D50D242FEFD0001C1B55 /* LaunchScreen.storyboard */,
+				4590D50B242FEFD0001C1B55 /* Assets.xcassets */,
+				4590D502242FEFC9001C1B55 /* AppDelegate.swift */,
+				453CDFEB246DE5E500794A3C /* Stateful.swift */,
+				453CE61C2447B74B00BF86D6 /* Views.swift */,
+				45D8122F2488355A005BD81D /* UIColor.swift */,
+				45D81231248835DC005BD81D /* UINavigationBar.swift */,
+				453CDFED247DAA3D00794A3C /* MainTabBarController.swift */,
+				4590D506242FEFC9001C1B55 /* QuestionViewController.swift */,
 				4590D51824329962001C1B55 /* StateController.swift */,
 				457FB3DD244E9949003CC71B /* ProfileViewController.swift */,
-				4590D506242FEFC9001C1B55 /* QuestionViewController.swift */,
-				453CE61C2447B74B00BF86D6 /* RoundImageView.swift */,
-				453CDFEB246DE5E500794A3C /* Stateful.swift */,
-				453CDFED247DAA3D00794A3C /* MainTabBarController.swift */,
+				457FB3E72458BAC0003CC71B /* EditProfileViewController.swift */,
+				4590D516242FF221001C1B55 /* Model.swift */,
+				4590D510242FEFD0001C1B55 /* Info.plist */,
 			);
 			path = Lifehacks;
 			sourceTree = "<group>";
@@ -162,13 +165,14 @@
 				457FB3E82458BAC0003CC71B /* EditProfileViewController.swift in Sources */,
 				4590D507242FEFC9001C1B55 /* QuestionViewController.swift in Sources */,
 				453CDFEE247DAA3D00794A3C /* MainTabBarController.swift in Sources */,
+				45D81232248835DC005BD81D /* UINavigationBar.swift in Sources */,
 				4590D503242FEFC9001C1B55 /* AppDelegate.swift in Sources */,
-				4590D505242FEFC9001C1B55 /* SceneDelegate.swift in Sources */,
 				453CDFEC246DE5E500794A3C /* Stateful.swift in Sources */,
 				4590D517242FF221001C1B55 /* Model.swift in Sources */,
+				45D812302488355A005BD81D /* UIColor.swift in Sources */,
 				457FB3DE244E9949003CC71B /* ProfileViewController.swift in Sources */,
 				4590D51924329962001C1B55 /* StateController.swift in Sources */,
-				453CE61D2447B74B00BF86D6 /* RoundImageView.swift in Sources */,
+				453CE61D2447B74B00BF86D6 /* Views.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

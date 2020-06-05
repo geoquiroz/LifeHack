@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ULh-Sk-ese">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ULh-Sk-ese">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -218,7 +218,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="y1N-Oa-zox">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="edit" id="XLS-Bj-oxP">
                             <connections>
-                                <segue destination="oEz-M9-00d" kind="modal" id="diK-lT-fGU"/>
+                                <segue destination="oEz-M9-00d" kind="presentation" id="cOP-gm-C33"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -236,7 +236,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="77f-gQ-np7">
             <objects>
-                <viewController storyboardIdentifier="Edit Profile" title="Edit Profile View Controller" id="2Mm-g5-AMo" customClass="EditProfileViewController" customModule="Lifehacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Edit Profile View Controller" id="2Mm-g5-AMo" customClass="EditProfileViewController" customModule="Lifehacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tA0-XR-z8D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,16 +296,15 @@
                     <navigationItem key="navigationItem" title="Edit Profile" id="q27-Bt-rFU">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="feh-C6-nUF">
                             <connections>
-                                <action selector="cancel:" destination="2Mm-g5-AMo" id="QPb-O0-l3g"/>
+                                <action selector="cancel:" destination="2Mm-g5-AMo" id="jHM-cB-hQw"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="etJ-hH-5t7">
                             <connections>
-                                <action selector="save:" destination="2Mm-g5-AMo" id="ibJ-6J-Q4f"/>
+                                <action selector="save:" destination="2Mm-g5-AMo" id="tjV-85-ez5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="aboutMeTextView" destination="zRx-rx-14U" id="98u-dZ-OSz"/>
                         <outlet property="nameTextField" destination="35R-8N-82B" id="VZG-3Q-Olk"/>
