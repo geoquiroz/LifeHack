@@ -24,12 +24,12 @@ class ProfileViewController: UIViewController, Stateful {
             set(user)
             navigationItem.rightBarButtonItem = nil
         }
-       else if let user = stateController?.user {
+        else if let user = stateController?.user {
             set(user)
         }
     }
     
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationController = segue.destination as? UINavigationController else {
             return
         }
@@ -37,10 +37,23 @@ class ProfileViewController: UIViewController, Stateful {
         if let destination = destination as? Stateful {
             passState(to: destination)
         }
-        if let destination = destination as? EditProfileViewController {
-            destination.delegate = self
-         }
+        
+    }
+    
+    @IBAction func editWasSaved(_ segue: UIStoryboardSegue){
+        guard let editViewController = segue.source as? EditProfileViewController else {
+            return
         }
+        if editViewController.nameDidChange {
+            nameLabel.textColor = UIColor.orange
+        }
+        if editViewController.aboutMeDidChange {
+            aboutMeLabel.textColor = UIColor.orange
+        }
+        
+    }
+    
+    @IBAction func editWasCanceled(_segue: UIStoryboardSegue){}
     
     private func set(_ user: User){
         profilePictureImageView.image = UIImage(named: user.profileImage)
@@ -48,15 +61,4 @@ class ProfileViewController: UIViewController, Stateful {
         reputationLabel.text = "\(user.reputation)"
         aboutMeLabel.text = user.aboutMe
     }
-    
 }
-
-extension ProfileViewController: EditProfileViewControllerDelegate {
-    func editProfileViewControllerDidEditProfileInfo(_ viewController: EditProfileViewController) {
-        nameLabel.textColor = UIColor.orange
-        reputationLabel.textColor = UIColor.orange
-        aboutMeLabel.textColor = UIColor.orange
-    }
-}
-
-
