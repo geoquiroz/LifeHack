@@ -48,14 +48,11 @@ extension UIView {
             return rect
         }
     }
-     
+
     @IBDesignable class RoundTextView: UITextView {
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
             textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         }
     }
-
-    
 }
-

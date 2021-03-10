@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController, Stateful {
+class QuestionViewController: UITableViewController, Stateful {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -16,12 +16,14 @@ class QuestionViewController: UIViewController, Stateful {
     @IBOutlet weak var ownerNameLabel: UILabel!
     
     var stateController: StateController?
+    var question: Question?
     
     override func viewDidLoad() {
     super.viewDidLoad()
-    guard let question = stateController?.question else {
+    guard let question = question else {
             return
     }
+        
     titleLabel.text = question.title
     bodyLabel.text = question.body
     updateScore(for: question)
@@ -34,24 +36,36 @@ class QuestionViewController: UIViewController, Stateful {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let profileViewController = segue.destination as? ProfileViewController {
             passState(to: profileViewController)
-            profileViewController.user = stateController?.question.owner
+            profileViewController.user = question?.owner
         }
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
       @IBAction func voteUp(_ sender: Any) {
-          stateController?.question.voteUp()
-        updateScore(for: stateController?.question)
+        question?.voteUp()
+        updateScore(for: question)
+        updateState(for: question)
           
       }
       @IBAction func voteDown(_ sender: Any) {
-          stateController?.question.voteDown()
-        updateScore(for: stateController?.question)
+        question?.voteDown()
+        updateScore(for: question)
+        updateState(for: question)
       }
-    
-    private func updateScore(for question: Question?) {
+}
+
+private extension QuestionViewController {
+    func updateState(for question: Question?){
+        if let question = question {
+            stateController?.updateQuestion(question)
+        }
+    }
+    func updateScore(for question: Question?){
         scoreLabel.text = "\(question?.score ?? 0)"
     }
-    
 }
 
 
